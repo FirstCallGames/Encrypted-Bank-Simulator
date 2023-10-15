@@ -7,7 +7,7 @@ This Encrypted Bank Simulator simluates the working of a banking system. It has 
    
    Run the following command on Windows/MacOS:- pip install mysql-connector-python
 
-3) Creating Database:
+2) Creating Database:
    
   To use the simulator you will have to run the following commands in mysql server:-
 
