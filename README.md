@@ -9,12 +9,11 @@ This Encrypted Bank Simulator simluates the working of a banking system. It has 
 
 2) Creating Database:
    
-  To use the simulator you will have to run the following commands in mysql server:-
+     To use the simulator you will have to run the following commands in mysql server:-
+      create Database BankDet;
+      use BankDet;
+      create table UserInfo(Username varchar(100) Primary Key, Password varchar(100), Pin int, Balance bigint, CardNumber bigint);
 
-  create Database BankDet;
-  use BankDet;
-  create table UserInfo(Username varchar(100) Primary Key, Password varchar(100), Pin int, Balance int, CardNumber int);
-
-  Or 
-
-  You can run the Database Config file by inserting your database password into it.
+   Or
+   
+      You can run the Database Config file by inserting your database password into it.
