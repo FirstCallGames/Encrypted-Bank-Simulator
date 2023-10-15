@@ -2,9 +2,6 @@ import BackEnd
 
 global userdetails
 
-x = "₹-WELCOME TO BANK OF SRUJEETH AND AADITYA UNLIMITED-₹"
-print(x.center(65, "-"))
-
 def Login():
   log = input("\nEnter Username:  ")
   psw = input("\nEnter your Password:  ")
@@ -179,4 +176,7 @@ def UserDetails(username):
 def Balance(balance):
   BackEnd.Encrypt(balance, "Balance")
 
-User()
+if BackEnd.l == True:
+  x = "₹-WELCOME TO BANK OF SRUJEETH AND AADITYA UNLIMITED-₹"
+  print(x.center(65, "-"))
+  User()
