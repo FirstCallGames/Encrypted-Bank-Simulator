@@ -1,5 +1,7 @@
 import mysql.connector as mq
 
+password = input("Enter mysql password: ")
+
 Capletters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',' ','.',"'"]
 Capencr_letters = ['Q', 'A', 'Z', 'W', 'S', 'X', 'E', 'D', 'C', 'R', 'F', 'V', 'T', 'G', 'B', 'Y', 'H', 'N', 'U', 'J', 'M', 'I', 'K', 'O', 'L', 'P',' ',"'",'.']
 
@@ -9,8 +11,14 @@ Numbersenc = ['4','5','6','7','3','2','9','1','0','8']
 Smallletters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 Smallencr_letters = ['q', 'a', 'z', 'w', 's', 'x', 'e', 'd', 'c', 'r', 'f', 'v', 't', 'g', 'b', 'y', 'h', 'n', 'u', 'j', 'm', 'i', 'k', 'o', 'l', 'p']
 
-con = mq.connect(host = 'Localhost',user = 'root', password = '12345678', database = 'BankDet')
-cur = con.cursor()
+try:
+    con = mq.connect(host = 'Localhost',user = 'root', password = password, database = 'BankDet')
+    cur = con.cursor()
+    print("Connection Successful\n")
+    l = True
+except:
+    l = False
+    print("Invalid Password Exiting...")
 
 def Encrypt(encr,path):
     encr_sentence = ''
