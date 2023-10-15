@@ -110,7 +110,7 @@ def Menu():
 
     for i in range(0, 10000000):
       pass
-    if (balance < 0):
+    if (balance <= 0):
       print("Insufficient Balance, Cannot Process Transaction!\n")
       Menu()
     else:
